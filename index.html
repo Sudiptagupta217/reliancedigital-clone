@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
         * {
             padding: 0;
@@ -13,8 +16,18 @@
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
 
+        p {
+            margin: 0 !important;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
         :root {
             --primary_color: #e42529;
+            --secondary_color: #003380;
+            --dark_blue_color: #012355;
             --text_white: #ffffff;
             --text_black: #000000;
         }
@@ -47,14 +60,15 @@
         .top_div~div>img {
             height: 50px;
             width: auto;
-            margin-left: 60px;
+            margin-left: 40px;
             margin-bottom: 10px;
         }
 
         .top_div~div>div {
             display: flex;
-            gap: 1rem;
+            gap: 0.5rem;
             margin-right: 20px;
+            align-items: center;
         }
 
 
@@ -66,7 +80,7 @@
             border-bottom: 1px solid #ccc;
             border-radius: 2em;
             position: relative;
-            width: 400px;
+            width: 450px;
         }
 
         .searchPanel__searchBox {
@@ -97,9 +111,66 @@
             transition: all .5s;
         }
 
-        button {
-            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        #menu_bar>ul {
+            display: flex;
+            justify-content: space-between;
+            background-color: var(--secondary_color);
+            list-style: none;
+            color: var(--text_white);
+            padding-left: 30px;
+            padding-right: 10px;
+        }
+
+        .main-menu {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
             cursor: pointer;
+        }
+
+        #menu_bar>ul>li i {
+            font-size: 10px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            padding: 10px 30px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            background-color: var(--dark_blue_color);
+            color: var(--text_white);
+        }
+
+        .main-menu:hover {
+            background-color: var(--primary_color);
+        }
+
+        .submenu-item-div {
+            display: flex;
+            gap: 100px;
+        }
+
+        .submenu-item>li {
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .submenu-item>li>ul>li {
+            font-size: 13px;
+            font-weight: 200 !important;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -108,35 +179,314 @@
 
 
 
-    <header id="header">
-        <div class="top_div">
-            <p>Find a store</p>
-            <p>|</p>
-            <p>Buying guides</p>
-            <p>|</p>
-            <p>Contact us</p>
-        </div>
-        <div>
-            <img src="https://www.reliancedigital.in/build/client/images/loaders/rd_logo.svg" alt="logo">
-            <!-- <input type="text"> -->
-
-            <div class=" iTOHqf suggestion__box">
-                <input type="text"aria-label="Search Box" class=" searchPanel__searchBox"
-                    placeholder="Find your favorite products" autocomplete="off" value="">
-                    <button type="button"aria-label="Search" class="searchPanel__search">
-                    <i class="fa fa-search"style="color: rgb(187, 187, 187); margin-top:5px"></i>
-                </button>
+    <header>
+        <div id="header">
+            <div class="top_div">
+                <p>Find a store</p>
+                <p>|</p>
+                <p>Buying guides</p>
+                <p>|</p>
+                <p>Contact us</p>
             </div>
-
             <div>
-                <p>Select your Pin Code</p>
-                <p>Cart</p>
-                <p>Login</p>
+                <img src="https://www.reliancedigital.in/build/client/images/loaders/rd_logo.svg" alt="logo">
+                <!-- <input type="text"> -->
+
+                <div class=" iTOHqf suggestion__box">
+                    <input type="text" aria-label="Search Box" class=" searchPanel__searchBox"
+                        placeholder="Find your favorite products" autocomplete="off" value="">
+                    <button type="button" aria-label="Search" class="searchPanel__search">
+                        <i class="fa fa-search" style="color: rgb(187, 187, 187); margin-top:5px"></i>
+                    </button>
+                </div>
+
+                <div>
+                    <p>Select your Pin Code</p>
+                    <p>|</p>
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <p>Cart</p>
+                    <p>|</p>
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <p>Login</p>
+                </div>
             </div>
+        </div>
+
+        <div id="menu_bar">
+            <ul>
+                <li class="dropdown">
+                    <div class="main-menu">
+                        <p>MOBILES & TABLETS</p><i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="dropdown-content">
+
+                        <div class="submenu-item-div">
+
+                            <ul class="submenu-item">
+                                <li>Smartphones</li>
+                                <li>Smartwatches
+                                    <ul>
+                                        <li>Apple</li>
+                                        <li>Samsung</li>
+                                        <li> Fireboltt</li>
+                                        <li>Noise</li>
+                                        <li>Boat</li>
+                                    </ul>
+                                </li>
+
+                                <li>Accessories
+                                    <ul>
+                                        <li>Tablet Accessories</li>
+                                        <li>Mobile Accessories</li>
+                                        <li>Mobile Grips & Stands</li>
+                                        <li> Car Mobile Holders</li>
+                                        <li>Memory Cards</li>
+                                        <li>Cables & Cords</li>
+                                        <li>Chargers & Adapters</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <ul class="submenu-item">
+
+                                <li>Headphones & Headsets</li>
+
+                                <li>Tablets & eReaders
+                                    <ul>
+                                        <li>Every Day use Tablets below 15000</li>
+                                        <li>Premium Tablets, Above 15001
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li>Power Banks</li>
+
+                                <li>eSlates</li>
+                            </ul>
+
+                            <ul class="submenu-item">
+                                <li>AI Learning Robots</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </li>
+
+                <li class="dropdown">
+                    <div class="main-menu">
+                        <p>TELEVISIONS</p><i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="dropdown-content">
+
+                        <div class="submenu-item-div">
+                            <ul class="submenu-item">
+                                <li>Televisions
+                                    <ul>
+                                        <li>Smart TVs</li>
+                                        <li> 32 Inch TVs</li>
+                                        <li> 43 Inch TVs</li>
+                                        <li> 55 Inch TVs</li>
+                                        <li> Android TVs</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <ul class="submenu-item">
+                                <li>Gaming</li>
+                                <li>Projectors
+                                    <ul>
+                                        <li>Gaming Consoles</li>
+                                        <li>Gaming Accessories</li>
+                                        <li>Gaming Titles</li>
+                                        <li>Gaming Controllers</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <ul class="submenu-item">
+                                <li>Reconnect Disney | Marvel Audio Collection</li>
+                                <li>TV & Audio Accessories
+                                    <ul>
+                                        <li>Virtual Reality Headsets</li>
+                                        <li>Stabilizers & Surge Protectors</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </div>
+                </li>
+
+                <li class="dropdown">
+                    <div class="main-menu">
+                        <p>AUDIO
+                        </p><i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="dropdown-content">
+                        <div class="submenu-item-div">
+                            <ul class="submenu-item">
+                                <li>Headphones & Headsets
+                                    <ul>
+                                        <li>True Wireless</li>
+                                        <li>Bluetooth Neckbands</li>
+                                        <li>Earphones</li>
+                                        <li>Bluetooth Headphones</li>
+                                        <li>Gaming Headset</li>
+                                        <li>Wired Headphones</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <ul class="submenu-item">
+                                <li>Speakers & Soundbars
+                                    <ul>
+                                        <li>Bluetooth Speakers</li>
+                                        <li>Smart Speakers</li>
+                                        <li>Home Theatre Systems</li>
+                                        <li>Specialty Speakers</li>
+                                        <li>Soundbars</li>
+                                        <li> Party Speakers</li>
+                                        <li>Multimedia Speakers</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <ul class="submenu-item">
+                                <li>Musical Instruments
+                                    <ul>
+                                        <li>Guitars and Ukuleles</li>
+                                        <li>Microphones</li>
+                                        <li>Musical Keyboards</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </div>
+                </li>
+
+                <li class="dropdown">
+                    <div class="main-menu">
+                        <p>HOME APPLIANCES
+                        </p><i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="dropdown-content">
+                        <div class="submenu-item-div">
+                            <ul class="submenu-item">
+                                <li>Air Conditioners
+                                    
+                                    <ul>
+                                        <li>Split Air Conditioners</li>
+                                        <li>Window Air Conditioners</li>
+                                        <li>Smart Air Conditioners</li>
+                                        <li>Energy Efficient Air Conditioners</li>
+                                        <li>1 ton Air Conditioners</li>
+                                        <li>1.5 ton Air Conditioners</li>
+                                        <li>5 star Air Conditioners</li>
+                                    </ul>
+                                </li>
+                                <li>Air Coolers</li>
+                                <li>Air Purifiers</li>
+                            </ul>
+
+                            <ul class="submenu-item">
+                                <li>Washing Machines
+                                    <ul>
+                                        <li>Fully Automatic Front Load</li>
+                                        <li>Fully Automatic Top Load</li>
+                                        <li>Semi-Automatic Top Load</li>
+                                    </ul>
+                                </li>
+                                <li>Refrigerators
+                                <ul>
+                                    <li> Single Door</li>
+                                    <li>
+                                        Double Door</li>
+                                    <li>
+                                        Side by Side Refrigerators</li>
+                                    <li>
+                                        Convertible</li>
+                                </ul>   
+                                </li>
+                                   
+                            </ul>
+
+                            <ul class="submenu-item">
+                                <li>Vacuum Cleaners
+                                    <ul>
+                                        <li>
+                                            Robotic Vacuum Cleaners</li>
+                                       
+                                    </ul>
+                                </li>
+                                <li>Radiators
+                                   </li>
+                                <li> Dishwashers
+                                   </li>
+                                <li> Fans
+                                   </li>
+                                <li> Cloth Dryers
+                                   </li>
+                                <li> Geysers
+                                    </li>
+                                <li>Room Heaters</li>
+                            </ul>
+
+                        </div>
+                </li>
+
+
+                <li>
+                    <div class="main-menu">
+                        <p>COMPUTERS</p><i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="main-menu">
+                        <p>CAMERAS</p><i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="main-menu">
+                        <p>KITCHEN APPLIANCES</p><i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="main-menu">
+                        <p>PERSONAL CARE</p><i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="main-menu">
+                        <p>ACCESSORIES</p><i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </div>
+                </li>
+
+            </ul>
         </div>
     </header>
 
     <script src="index.js"></script>
+    <script>
+        $(document).ready(function () {
+            var leftGap = 50;
+            var rightGap = 50;
+
+            $('.dropdown-content').each(function () {
+                var offsetLeft = $(this).parent('.dropdown').offset().left - leftGap;
+                var offsetRight = $(window).width() - ($(this).parent('.dropdown').offset().left + $(this).parent('.dropdown').outerWidth()) - rightGap;
+
+                $(this).css({
+                    'left': -offsetLeft,
+                    'right': -offsetRight
+                });
+            });
+        });
+    </script>
+
 </body>
 
 </html>
