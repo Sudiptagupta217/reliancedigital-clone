@@ -11,103 +11,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
     <style>
-        .divider {
-            height: 7px;
-            width: 100%;
-            background-color: rgba(226, 226, 226, 0.845)
-        }
 
-        .view-all-btn-div {
-            display: flex;
-            align-items: center;
-            padding: 25px;
-            background-color: rgba(247, 247, 247, 0.845);
-            gap: 1rem;
-            font-size: 16px;
-            font-weight: 600;
-            line-height: .7em;
-
-        }
-
-        .btn {
-            background-color: var(--secondary_color);
-            padding: 2px 10px;
-            border-radius: 2px;
-        }
-
-        .item-flex-div {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            padding: 10px 50px;
-        }
-
-        .deail-div {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            margin: 5px 20px 40px 20px;
-        }
-
-        .item-flex-div>div {
-            /* width: 210px; */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-            margin: 10px;
-        }
-
-        .item-flex-div>div span {
-            color: rgb(133, 131, 131);
-        }
-
-        .offer-tag {
-            border-radius: 8px 0px;
-            color: #fff;
-            display: inline-block;
-            font-weight: 500;
-            height: 18px;
-            line-height: 14px;
-            padding: 2px 8px;
-            background-color: var(--secondary_color);
-        }
-
-        .item-img {
-            height: 180px;
-            width: 180px;
-
-        }
-
-        .title {
-            color: var(--secondary_color);
-            height: 2.3em;
-            line-height: 1.1em;
-            margin-right: 20px;
-            overflow: hidden;
-            font-weight: 600;
-            font-size: 16px;
-        }
-
-        .price-tag {
-            color: var(--text_black) !important;
-            font-size: 14px;
-            font-weight: 600;
-            margin: 0;
-        }
-
-        .offer-available {
-            display: inline-block;
-            color: rgb(49, 129, 46);
-            background: rgb(239, 252, 245);
-            border: 1px solid rgb(49, 129, 46);
-            border-radius: 16px;
-            font-size: 11px;
-            font-weight: 600;
-            padding: 3px 10px;
-            margin-top: 5px;
-            text-transform: none;
-            white-space: nowrap;
-        }
     </style>
 </head>
 
@@ -122,7 +26,8 @@
                 <p>|</p>
                 <p>Contact us</p>
             </div>
-            <div>
+
+            <div class="search-div">
                 <img src="https://www.reliancedigital.in/build/client/images/loaders/rd_logo.svg" alt="logo">
                 <!-- <input type="text"> -->
 
@@ -144,9 +49,10 @@
                     <p>Login</p>
                 </div>
             </div>
+
         </div>
 
-        <div id="menu_bar">
+        <div id="menu_bar" class="">
             <ul>
                 <li class="dropdown">
                     <div class="main-menu">
@@ -641,7 +547,6 @@
         </div>
     </header>
 
-
     <!-- banner -->
     <div class="slideshow-container">
 
@@ -898,30 +803,32 @@
     </section>
 
     <!-- Slider 2 -->
-    <div class="divider"></div>
-    <div class="slideshow-container">
+    <section>
+        <div class="divider"></div>
+        <div class="slideshow-container">
 
-        <div class="mySlides1">
-            <img src="./assets/images/banner2-1.jpg" style="width:100%">
+            <div class="mySlides1">
+                <img src="./assets/images/banner2-1.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides1">
+                <img src="./assets/images/banner2-4.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides1">
+                <img src="./assets/images/banner2-3.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides1">
+                <img src="./assets/images/banner2-4.jpg" style="width:100%">
+            </div>
+
+            <a class="prev" onclick="plusSlides1(-1)">❮</a>
+            <a class="next" onclick="plusSlides1(1)">❯</a>
+
         </div>
-
-        <div class="mySlides1">
-            <img src="./assets/images/banner2-4.jpg" style="width:100%">
-        </div>
-
-        <div class="mySlides1">
-            <img src="./assets/images/banner2-3.jpg" style="width:100%">
-        </div>
-
-        <div class="mySlides1">
-            <img src="./assets/images/banner2-4.jpg" style="width:100%">
-        </div>
-
-        <a class="prev" onclick="plusSlides1(-1)">❮</a>
-        <a class="next" onclick="plusSlides1(1)">❯</a>
-
-    </div>
-    <div class="divider"></div>
+        <div class="divider"></div>
+    </section>
 
     <!-- Top Deals on Mobiles -->
     <section>
@@ -1141,8 +1048,9 @@
         </div>
     </section>
 
-     <!-- Great Deals on Electronics -->
-     <section>
+    <!-- Great Deals on Electronics -->
+    <section>
+        <div class="divider"></div>
         <div class="view-all-btn-div" style="background-color: white;">
             <p class="">Great Deals on Electronics</p>
         </div>
@@ -1160,6 +1068,337 @@
         </div>
     </section>
 
+    <!-- banner 3 -->
+    <section>
+        <div class="divider"></div>
+        <img src="./assets/images/banner3-1.avif" style="width:100%">
+        <div class="divider"></div>
+    </section>
+
+    <!-- THE RELIANCE DIGITAL BRAND PROMISE -->
+    <section>
+        <h3>THE RELIANCE DIGITAL BRAND PROMISE</h3>
+        <div class="brand-container">
+            <div>
+                <img height="35" src="./assets/images/insta.png" alt="">
+                <h5>INSTA DELIVERY</h5>
+                <p>LESS THAN 3 HRS.</p>
+            </div>
+            <div>
+                <img height="35" src="./assets/images/rs.png" alt="">
+                <h5>MULTIPLE FINANCE OPTIONS</h5>
+                <p>NO COST EMI</p>
+            </div>
+            <div>
+                <img height="35" src="./assets/images/res.webp" alt="">
+                <h5>SERVICE GUARANTEE</h5>
+                <p>HASSLE FREE</p>
+            </div>
+            <div>
+                <img height="35" src="./assets/images/net.png" alt="">
+                <h5>UNMATCHED NETWORK</h5>
+                <p>700 CITIES,2000 STORES</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- banner 3 -->
+    <section>
+        <div class="divider"></div>
+        <img src="./assets/images/banner4-1.avif" style="width:100%">
+        <div class="divider"></div>
+    </section>
+
+    <!-- Smartphone Bonanza | 10% (Upto Rs.3000 off)-->
+    <section>
+        <!-- <div class="divider"></div> -->
+        <div class="view-all-btn-div">
+            <p class="">Smartphone Bonanza | 10% (Upto Rs.3000 off)</p>
+            <button type="button" class="btn btn-primary">View all</button>
+        </div>
+
+        <div class="item-flex-div">
+            <div>
+                <div class="item-img">
+                    <img width="auto" height="180" src="./assets/images/mob1.jpeg" alt="">
+                </div>
+                <div>
+                    <div style="margin-bottom:7px;">
+                        <p class="title">Samsung Galaxy A15 5G 128 GB, 8 GB RAM Blue Black, Mobile Phone</p>
+                    </div>
+                    <p><span>Offer Price:&nbsp;</span><span class="price-tag">₹11,990.00</span></p>
+                    <p><span>M.R.P:&nbsp;</span><span><s>₹16,990.00</s></span></p>
+                    <p><span>You Save:&nbsp;</span><span>33%(₹5,900)</span></p>
+                </div>
+            </div>
+
+            <div>
+                <div class="item-img">
+                    <img width="auto" height="180" src="./assets/images/mob2.jpeg" alt="">
+                </div>
+                <div>
+                    <div style="margin-bottom:7px;">
+                        <p class="title">Xiaomi Redmi A2 64 GB, 4 GB RAM, Blue, Mobile
+                        </p>
+                    </div>
+
+                    <p><span>Offer Price:&nbsp;</span><span class="price-tag">₹11,990.00</span></p>
+                    <p><span>M.R.P:&nbsp;</span><span><s>₹16,990.00</s></span></p>
+                    <p><span>You Save:&nbsp;</span><span>33%(₹5,900)</span></p>
+
+                </div>
+            </div>
+
+            <div>
+
+                <div class="item-img">
+                    <img width="auto" height="180" src="./assets/images/mob3.jpeg" alt="">
+                </div>
+                <div>
+                    <div style="margin-bottom:7px;">
+                        <p class="title">Redmi Note 13 Pro 5G 256 GB, 8 GB RAM, Mobile
+                        </p>
+                    </div>
+
+                    <!-- <p><span>Offer Price:&nbsp;</span><span class="price-tag">₹11,990.00</span></p> -->
+                    <p><span class="price-tag">₹11,990.00</span></p>
+                    <!-- <p><span>M.R.P:&nbsp;</span><span><s>₹16,990.00</s></span></p> -->
+                    <!-- <p><span>You Save:&nbsp;</span><span>33%(₹5,900)</span></p> -->
+
+                </div>
+            </div>
+
+            <div>
+
+                <div class="item-img">
+                    <img width="auto" height="180" src="./assets/images/mob4.jpeg" alt="">
+                </div>
+                <div>
+                    <div style="margin-bottom:7px;">
+                        <p class="title">Redmi Note 13 Pro+ 5G 256 GB, 8 GB RAM, Purple
+                        </p>
+                    </div>
+
+                    <!-- <p><span>Offer Price:&nbsp;</span><span class="price-tag">₹11,990.00</span></p> -->
+                    <p><span class="price-tag">₹11,990.00</span></p>
+                    <!-- <p><span>M.R.P:&nbsp;</span><span><s>₹16,990.00</s></span></p> -->
+                    <!-- <p><span>You Save:&nbsp;</span><span>33%(₹5,900)</span></p> -->
+
+                </div>
+            </div>
+
+            <div>
+
+                <div class="item-img">
+                    <img width="auto" height="180" src="./assets/images/mob5.jpeg" alt="">
+                </div>
+                <div>
+                    <div style="margin-bottom:7px;">
+                        <p class="title">Oppo A79 5G 128 GB, 8 GB RAM, Green, Mobile Phone
+                        </p>
+                    </div>
+
+                    <p><span>Offer Price:&nbsp;</span><span class="price-tag">₹11,990.00</span></p>
+                    <p><span>M.R.P:&nbsp;</span><span><s>₹16,990.00</s></span></p>
+                    <p><span>You Save:&nbsp;</span><span>33%(₹5,900)</span></p>
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+    </section>
+
+    <!-- TCL TVs with Flat 10% Instant Discount | HDFC/SBI Card Offer-->
+    <section>
+        <div class="divider"></div>
+        <div class="view-all-btn-div">
+            <p class="">TCL TVs with Flat 10% Instant Discount | HDFC/SBI Card Offer</p>
+            <button type="button" class="btn btn-primary">View all</button>
+        </div>
+
+        <div class="item-flex-div">
+
+            <div>
+                <div class="offer-tag">
+                    <p>Flat 10% Instant Bank Discount</p>
+                </div>
+                <div class="item-img">
+                    <img width="auto" height="180" src="./assets/images/tv1.jpeg" alt="">
+                </div>
+                <div>
+                    <div style="margin-bottom:7px;">
+                        <p class="title">Samsung Galaxy A15 5G 128 GB, 8 GB RAM Blue Black, Mobile Phone</p>
+                    </div>
+                    <p><span>Offer Price:&nbsp;</span><span class="price-tag">₹11,990.00</span></p>
+                    <p><span>M.R.P:&nbsp;</span><span><s>₹16,990.00</s></span></p>
+                    <p><span>You Save:&nbsp;</span><span>33%(₹5,900)</span></p>
+                </div>
+            </div>
+
+            <div>
+                <div class="offer-tag">
+                    <p>Flat 10% Instant Bank Discount</p>
+                </div>
+                <div class="item-img">
+                    <img width="auto" height="180" src="./assets/images/tv2.jpeg" alt="">
+                </div>
+                <div>
+                    <div style="margin-bottom:7px;">
+                        <p class="title">Xiaomi Redmi A2 64 GB, 4 GB RAM, Blue, Mobile
+                        </p>
+                    </div>
+
+                    <p><span>Offer Price:&nbsp;</span><span class="price-tag">₹11,990.00</span></p>
+                    <p><span>M.R.P:&nbsp;</span><span><s>₹16,990.00</s></span></p>
+                    <p><span>You Save:&nbsp;</span><span>33%(₹5,900)</span></p>
+
+                </div>
+            </div>
+
+            <div>
+                <div class="offer-tag">
+                    <p>Flat 10% Instant Bank Discount</p>
+                </div>
+                <div class="item-img">
+                    <img width="auto" height="180" src="./assets/images/tv3.jpeg" alt="">
+                </div>
+                <div>
+                    <div style="margin-bottom:7px;">
+                        <p class="title">Redmi Note 13 Pro 5G 256 GB, 8 GB RAM, Mobile
+                        </p>
+                    </div>
+
+                    <p><span>Offer Price:&nbsp;</span><span class="price-tag">₹11,990.00</span></p>
+                    <p><span>M.R.P:&nbsp;</span><span><s>₹16,990.00</s></span></p>
+                    <p><span>You Save:&nbsp;</span><span>33%(₹5,900)</span></p>
+
+                </div>
+            </div>
+
+            <div>
+                <div class="offer-tag">
+                    <p>Flat 10% Instant Bank Discount</p>
+                </div>
+                <div class="item-img">
+                    <img width="auto" height="180" src="./assets/images/tv4.jpeg" alt="">
+                </div>
+                <div>
+                    <div style="margin-bottom:7px;">
+                        <p class="title">Redmi Note 13 Pro+ 5G 256 GB, 8 GB RAM, Purple
+                        </p>
+                    </div>
+
+                    <p><span>Offer Price:&nbsp;</span><span class="price-tag">₹11,990.00</span></p>
+
+                    <p><span>M.R.P:&nbsp;</span><span><s>₹16,990.00</s></span></p>
+                    <p><span>You Save:&nbsp;</span><span>33%(₹5,900)</span></p>
+
+                </div>
+            </div>
+
+            <div>
+                <div class="offer-tag">
+                    <p>Flat 10% Instant Bank Discount</p>
+                </div>
+                <div class="item-img">
+                    <img width="auto" height="180" src="./assets/images/tv5.jpeg" alt="">
+                </div>
+                <div>
+                    <div style="margin-bottom:7px;">
+                        <p class="title">Oppo A79 5G 128 GB, 8 GB RAM, Green, Mobile Phone
+                        </p>
+                    </div>
+
+                    <p><span>Offer Price:&nbsp;</span><span class="price-tag">₹11,990.00</span></p>
+                    <p><span>M.R.P:&nbsp;</span><span><s>₹16,990.00</s></span></p>
+                    <p><span>You Save:&nbsp;</span><span>33%(₹5,900)</span></p>
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+    </section>
+
+    <!-- EXPLORE OUR RANGE OF PRODUCTS -->
+    <section>
+        <div class="divider"></div>
+        <h3>EXPLORE OUR RANGE OF PRODUCTS</h3>
+        <div class="products-div">
+            <div>
+                <img height="180" src="./assets/images/brand1.avif" alt="">
+                <p>LESS THAN 3 HRS.</p>
+            </div>
+            <div>
+                <img height="180" src="./assets/images/brand2.webp" alt="">
+                <p>LESS THAN 3 HRS.</p>
+            </div>
+            <div>
+                <img height="180" src="./assets/images/brand3.webp" alt="">
+                <p>LESS THAN 3 HRS.</p>
+            </div>
+            <div>
+                <img height="180" src="./assets/images/brand4.webp" alt="">
+                <p>LESS THAN 3 HRS.</p>
+            </div>
+            <div>
+                <img height="180" src="./assets/images/brand5.avif" alt="">
+                <p>LESS THAN 3 HRS.</p>
+            </div>
+
+        </div>
+
+        <div>
+            <button type="button" class="btn btn-primary btn-round">View All</button>
+        </div>
+
+    </section>
+
+    <!-- Bottom Menu -->
+    <section>
+        <div class="divider"></div>
+        <div
+            style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; background-color: blue;">
+            <div>
+                <h4>PRODUCT CATEGORIES</h4>
+                <p> Smartphones</p>
+                <p> Laptops</p>
+                <p> DSLR Cameras</p>
+                <p> Televisions</p>
+                <p> Air Conditioners</p>
+                <p> Refrigerators</p>
+                <p> Kitchen Appliances</p>
+                <p>Accessories</p>
+                <p>Personal Care & Grooming</p>
+            </div>
+            <div>
+                <h4>SITE INFO</h4>
+                <p>About Reliance Digital</p>
+                <p>resQ Services</p>
+                <p>Site Map</p>
+                <p>Gift Cards</p>
+                <p>Corporate Enquires</p>
+                <p>Contact Us</p>
+            </div>
+            <div>
+                <h4>RESOURCE CENTRE</h4>
+                <p>Product Reviews</p>
+                <p>Buying Guides</p>
+                <p>How Tos</p>
+                <p>Featured Stories</p>
+                <p>Events & Happenings</p>
+                <p>Nearest Store</p>
+            </div>
+            <div></div>
+        </div>
+    </section>
 
     <script src="index.js"></script>
 
