@@ -14,7 +14,7 @@
 </head>
 
 <style>
-   
+
 </style>
 
 <body>
@@ -24,8 +24,9 @@
         <div id="header">
 
             <div class="login-top-div">
-                
-                    <div><p>OUR BRAND PROMISE
+
+                <div>
+                    <p>OUR BRAND PROMISE
                     </p>
                     <p>EASY RETURN
                     </p>
@@ -37,8 +38,9 @@
                     </p>
                     <p>Find a store
                     </p>
-                    <p>Contact us</p></div>
-                
+                    <p>Contact us</p>
+                </div>
+
             </div>
 
             <div class="search-div">
@@ -562,19 +564,31 @@
 
     <!-- body -->
     <section>
-        <div class="login-body-div">
-            <img width="67%" height="150" src="./assets/images/banner5-1.avif" alt="">
+
+        <div style="display: flex; padding: 20px; align-items: center; justify-content: center;">
             <div class="login-div">
                 <div>
-                    <h4>Login / Register</h4>
+                    <h4>Register New Account</h4>
                 </div>
                 <div>
-                    <input class="input" type="text" inputmode="numeric" placeholder="Enter Mobile Number"
-                        aria-required="false">
-                        <div onclick="redirectToRegistrationPage()" class="button">PROCEED</div>
+                    <input class="input" type="text" placeholder="Enter First Name*" aria-required="false">
+                    <input class="input" type="text" placeholder="Enter Last Name*" aria-required="false">
+                    <div>
+                        <input class="input" type="email" placeholder="Enter Email Address*" aria-required="false">
+                        <p>Your email address will be used to send order invoice, order updates etc.</p>
+                    </div>
+                    <div class="verify-div">VERIFY EMAIL</div>
+                    <div>
+                        <input class="input" type="text" placeholder="Enter Mobile Number*" aria-required="false">
+                        <p>Your mobile number will be used to avail benefits such as Jio Mart Cashback and ROne Loyality
+                            Points and receive quick notifications.</p>
+                    </div>
+                    <div onclick="redirectToRegistrationPage()" class="button">PROCEED</div>
+                    <p onclick="redirectToLoginPage()" class="have-an-ac">Already Registered?  <span>LOGIN</span></p>
                 </div>
             </div>
         </div>
+
     </section>
 
     <!-- Bottom Menu -->

@@ -25,7 +25,7 @@ li {
 
 #header {
     position: relative;
-    height: 90px;
+    height: 100px;
     background-color: var(--primary_color);
     color: var(--text_white);
     padding-top: 5px;
@@ -350,6 +350,11 @@ h3 {
     margin: 25px
 }
 
+p,
+i {
+    cursor: pointer;
+}
+
 .brand-container {
     display: flex;
     flex-direction: row;
@@ -431,21 +436,25 @@ h3 {
     padding: 20px 50px;
     display: flex;
 }
-.bottom-div i{
+
+.bottom-div i {
     margin-right: 10px;
     margin-top: 5px;
 }
-.bottom-div h4{
+
+.bottom-div h4 {
     font-weight: 700;
 }
 
-.bottom-div>div:nth-child(2){
+.bottom-div>div:nth-child(2) {
     margin-left: 250px;
 }
-.bottom-div img{
+
+.bottom-div img {
     margin-top: 10px;
 }
-.disclaimer-div{
+
+.disclaimer-div {
     background-color: var(--dark_blue_color);
     color: var(--text_white);
     text-align: center;
@@ -454,14 +463,128 @@ h3 {
     flex-direction: column;
     gap: 7px;
 }
-.disclaimer-div>p:nth-child(1){
+
+.disclaimer-div>p:nth-child(1) {
     font-weight: 600;
     font-size: 15px;
 }
 
-hr{
+hr {
     margin-top: 10px;
     margin-bottom: 10px;
     border: 0;
     border-top: 1px solid #efefef4f;
+}
+
+.login-top-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.login-top-div>div {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    font-weight: 600;
+}
+
+.login-body-div {
+    display: flex;
+    padding: 30px 20px;
+    gap: 2.5rem;
+}
+
+.login-div {
+    /* height: 400px; */
+    width: 500px;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.login-div>div:nth-child(1) {
+    height: 50px;
+    background-color: rgba(244, 246, 246, 0.895);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+    border-bottom: 1px solid rgba(203, 200, 200, 0.755);
+}
+
+.login-div>div:nth-child(2) {
+    padding: 20px 20px 60px 20px;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-div>h4 {
+    font-weight: 600;
+    font-size: 19px;
+    color: rgba(35, 35, 35, 0.945);
+}
+
+.input {
+    width: 100%;
+    border: 1px solid rgb(216, 226, 239);
+    background-color: transparent;
+    line-height: 26px;
+    outline: none;
+    border-radius: 3px;
+    color: rgb(2, 2, 2);
+    font-size: 14px;
+    height: 42px;
+    padding: 8px 16px;
+}
+
+input::placeholder {
+    color: rgb(77, 77, 77);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+input~p {
+    font-size: 13px;
+    padding: 2px 0 0 5px;
+    color: grey;
+}
+
+.button {
+    width: 100%;
+    background-color: var(--primary_color);
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: 600;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.verify-div {
+    padding: 7px 10px;
+    border: 1px solid var(--primary_color);
+    width: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary_color);
+    font-weight: 600;
+}
+.have-an-ac{
+    text-align: center;
+    color: rgb(27, 27, 27)
+}
+
+.have-an-ac>span{
+    color: var(--primary_color);
+    font-weight: 600;
+    font-size: 16px;
 }

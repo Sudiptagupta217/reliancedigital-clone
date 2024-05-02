@@ -67,3 +67,6 @@ function showSlides1(){
 function redirectToLoginPage() {
   window.location.href = 'login.html';
 }
+function redirectToRegistrationPage() {
+  window.location.href = 'register.html';
+}
