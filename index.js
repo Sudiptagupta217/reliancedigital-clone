@@ -63,3 +63,7 @@ function showSlides1(){
     dots[slideIndex1-1].className += " active";
     setTimeout(showSlides1, 3500);
 }
+
+function redirectToLoginPage() {
+  window.location.href = 'login.html';
+}
