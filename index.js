@@ -70,3 +70,9 @@ function redirectToLoginPage() {
 function redirectToRegistrationPage() {
   window.location.href = 'register.html';
 }
+function redirectToHomePage() {
+  window.location.href = 'index.html';
+}
+function redirectToProductPage() {
+  window.location.href = 'products.html';
+}

@@ -12,7 +12,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
-    
+
+
+    <style>
+       
+    </style>
 </head>
 
 <body>
@@ -29,7 +33,8 @@
             </div>
 
             <div class="search-div">
-                <img src="https://www.reliancedigital.in/build/client/images/loaders/rd_logo.svg" alt="logo">
+                <img onclick="redirectToHomePage()"
+                    src="https://www.reliancedigital.in/build/client/images/loaders/rd_logo.svg" alt="logo">
                 <!-- <input type="text"> -->
 
                 <div class=" iTOHqf suggestion__box">
@@ -44,14 +49,10 @@
                     <p>Select your Pin Code</p>
                     <p>|</p>
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                    <!-- <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i> -->
                     <p>Cart</p>
                     <p>|</p>
                     <i class="fa fa-user" aria-hidden="true"></i>
-                    <p onclick="redirectToLoginPage()" >Login</p>
+                    <p onclick="redirectToLoginPage()">Login</p>
                 </div>
             </div>
 
@@ -596,7 +597,7 @@
         <div class="divider"></div>
         <div class="view-all-btn-div">
             <p class="">Best Deals On Air Coolers</p>
-            <button type="button" class="btn btn-primary">View all</button>
+            <button onclick="redirectToProductPage()" type="button" class="btn btn-primary">View all</button>
         </div>
 
         <div class="item-flex-div">
@@ -709,7 +710,7 @@
         <div class="divider"></div>
         <div class="view-all-btn-div">
             <p class="">2024 New Range of ACs from Rs. 22990*</p>
-            <button type="button" class="btn btn-primary">View all</button>
+            <button onclick="redirectToProductPage()" type="button" class="btn btn-primary">View all</button>
         </div>
 
         <div class="item-flex-div">
@@ -855,7 +856,7 @@
         <div class="divider"></div>
         <div class="view-all-btn-div">
             <p class="">Best Selling Audio Accessories</p>
-            <button type="button" class="btn btn-primary">View all</button>
+            <button onclick="redirectToProductPage()" type="button" class="btn btn-primary">View all</button>
         </div>
 
         <div class="item-flex-div">
@@ -960,7 +961,7 @@
         <div class="view-all-btn-div">
             <p class="">Stock clearance Sale | Monitors starting from Rs.3299
             </p>
-            <button type="button" class="btn btn-primary">View all</button>
+            <button onclick="redirectToProductPage()" type="button" class="btn btn-primary">View all</button>
         </div>
 
         <div class="item-flex-div">
@@ -1119,7 +1120,7 @@
         <!-- <div class="divider"></div> -->
         <div class="view-all-btn-div">
             <p class="">Smartphone Bonanza | 10% (Upto Rs.3000 off)</p>
-            <button type="button" class="btn btn-primary">View all</button>
+            <button onclick="redirectToProductPage()" type="button" class="btn btn-primary">View all</button>
         </div>
 
         <div class="item-flex-div">
@@ -1222,7 +1223,7 @@
         <div class="divider"></div>
         <div class="view-all-btn-div">
             <p class="">TCL TVs with Flat 10% Instant Discount | HDFC/SBI Card Offer</p>
-            <button type="button" class="btn btn-primary">View all</button>
+            <button onclick="redirectToProductPage()" type="button" class="btn btn-primary">View all</button>
         </div>
 
         <div class="item-flex-div">
@@ -1337,23 +1338,23 @@
         <div class="divider"></div>
         <h3>EXPLORE OUR RANGE OF PRODUCTS</h3>
         <div class="products-div">
-            <div>
+            <div class="item-img">
                 <img height="180" src="./assets/images/brand1.avif" alt="">
                 <p>LESS THAN 3 HRS.</p>
             </div>
-            <div>
+            <div class="item-img">
                 <img height="180" src="./assets/images/brand2.webp" alt="">
                 <p>LESS THAN 3 HRS.</p>
             </div>
-            <div>
+            <div class="item-img">
                 <img height="180" src="./assets/images/brand3.webp" alt="">
                 <p>LESS THAN 3 HRS.</p>
             </div>
-            <div>
+            <div class="item-img">
                 <img height="180" src="./assets/images/brand4.webp" alt="">
                 <p>LESS THAN 3 HRS.</p>
             </div>
-            <div>
+            <div class="item-img">
                 <img height="180" src="./assets/images/brand5.avif" alt="">
                 <p>LESS THAN 3 HRS.</p>
             </div>
@@ -1361,7 +1362,7 @@
         </div>
 
         <div>
-            <button type="button" class="btn btn-primary btn-round">View All</button>
+            <button onclick="redirectToProductPage()" type="button" class="btn btn-primary btn-round">View All</button>
         </div>
 
     </section>
@@ -1430,8 +1431,12 @@
             <div>
                 <h4>EXPERIENCE RELIANCE DIGITAL APP ON MOBILE</h4>
                 <div>
-                    <img height="40" width="auto" src="./assets/images/play-store.webp" alt="">
-                    <img height="40" width="auto" src="./assets/images/applu-store.webp" alt="">
+                    <a href="https://play.google.com/store/apps/details?id=in.digital.reliance" target="_blank">
+                        <img onclick="" height="40" width="auto" src="./assets/images/play-store.webp" alt="">
+                    </a>
+                    <a href="https://apps.apple.com/in/app/reliance-digital-shopping-app/id1513379107" target="_blank">
+                        <img onclick="" height="40" width="auto" src="./assets/images/applu-store.webp" alt="">
+                    </a>
                 </div>
             </div>
         </div>
@@ -1441,7 +1446,10 @@
     <section>
         <div class="disclaimer-div">
             <p><u>Disclaimer</u></p>
-            <p>Product prices, offers and availability are subject to change from time to time. All prices are inclusive of taxes. Product colours & images are only for illustration and they may not exactly match with the actual product. Product specs are subject to change & may vary from actual product. While every care is taken to avoid inaccuracies in content, these are provided as is, without warranty of any kind.</p>
+            <p>Product prices, offers and availability are subject to change from time to time. All prices are inclusive
+                of taxes. Product colours & images are only for illustration and they may not exactly match with the
+                actual product. Product specs are subject to change & may vary from actual product. While every care is
+                taken to avoid inaccuracies in content, these are provided as is, without warranty of any kind.</p>
             <hr>
             <p> © 2024 Reliance Digital. All Rights Reserved.</p>
         </div>

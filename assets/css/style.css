@@ -54,13 +54,12 @@ li {
     align-items: center;
 }
 
-
-
 .search-div>img {
     height: 50px;
     width: auto;
     margin-left: 40px;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
 .search-div>div {
@@ -310,6 +309,19 @@ li {
 .item-img {
     height: 180px;
     width: 180px;
+}
+
+
+.item-flex-div>div:hover .title {
+    color: var(--primary_color);
+}
+
+.item-img img {
+    transition: transform 0.6s ease;
+}
+
+.item-img:hover img {
+    transform: scale(1.1);
 }
 
 .title {
@@ -578,13 +590,235 @@ input~p {
     color: var(--primary_color);
     font-weight: 600;
 }
-.have-an-ac{
+
+.have-an-ac {
     text-align: center;
     color: rgb(27, 27, 27)
 }
 
-.have-an-ac>span{
+.have-an-ac>span {
     color: var(--primary_color);
     font-weight: 600;
     font-size: 16px;
+}
+
+.col-md-3 {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    background-color: white;
+    padding: 20px 20px;
+    align-items: start;
+    gap: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px
+}
+
+.filter>h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600 !important;
+}
+
+.row {
+    padding: 0 10px;
+    margin: 0 !important;
+    display: flex;
+    gap: 1rem;
+}
+
+.in-sl {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.in-sl>label {
+    margin-bottom: -2px !important;
+    font-weight: 300 !important;
+    font-size: 16px;
+}
+
+.ck-box {
+    height: 17px;
+    width: 17px;
+}
+
+.filter p {
+    font-weight: 600;
+    font-size: 16px;
+    color: #2b2b2bcc;
+}
+
+.col-md-3,
+.col-md-9 {
+    padding: 0;
+}
+
+.shorting>div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.shorting>div>p {
+    font-weight: normal;
+    color: grey;
+}
+
+.shorting>div>div {
+    display: flex;
+    gap: 2rem;
+}
+
+.shorting>div>div>p:nth-child(2) {
+    font-weight: 400;
+    border: 1px solid green;
+    border-radius: 5px;
+    padding: 2px 10px;
+    font-size: 14px;
+}
+
+.shorting>div>div>p:nth-child(3),
+.shorting>div>div>p:nth-child(4) {
+    font-weight: 400;
+    background-color: rgba(210, 209, 209, 0.667);
+    border-radius: 5px;
+    padding: 2px 10px;
+    font-size: 14px;
+}
+
+.item-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    width: 100%;
+}
+
+.item-price>p:nth-child(1) {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--secondary_color);
+}
+.item-price>p:nth-child(2) {
+    font-size: 14px;
+    font-weight: 400;
+    color:gray;
+}
+
+.item-price>p:nth-child(3) {
+    font-size: 13px;
+    font-weight: 500;
+    color: green;
+}
+
+.in-sl i {
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.in-sl {
+    display: flex;
+    align-items: center;
+}
+.product-body {
+    background-color: rgb(244, 245, 246);
+}
+
+
+.product-item {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.item img {
+    transition: transform 0.6s ease;
+}
+
+.item:hover img {
+    transform: scale(1.1); 
+}
+
+.item:hover .title {
+    color: var(--primary_color);
+}
+
+/* product details */
+.red{
+    color: var(--primary_color);
+}
+
+.details-left-tag{
+    padding: 20px; 
+    background-color: white; 
+    display: flex;
+     flex-direction: column;
+      align-items: center;
+}
+.gap-05{
+    gap: 0.5rem !important;
+}
+.gap-0{
+    gap: 0 !important;
+    padding: 0 !important;
+    background-color: gray;
+}
+.sliders-item{
+    display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; margin-top: 100px;
+}
+.details-left-tag i{
+    margin-bottom: 50px;
+}
+.details-right-tag{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: white;
+    padding: 20px;
+}
+.details-right-tag>h4{
+    font-size: 19px;
+    font-weight: 600;
+}
+.details-right-tag>h4>span{
+    font-size: 15px;
+    font-weight: 600;
+}
+.rating-div{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+.rating-div>div:nth-child(1){
+    display: flex;
+    flex-direction: row;
+    color: rgb(238, 165, 7) !important;
+    align-items: center;
+}
+.total-rating{
+    color: var(--secondary_color);
+    font-size: 17px;
+    font-weight: 500;
+}
+.fa-star{
+    font-size: 16px;
+}
+.share{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.gap-0>div{
+    background-color: white;
+}
+.gap-0>div:nth-child(1){
+   border-right: 1px solid rgba(199, 194, 194, 0.692);
 }
