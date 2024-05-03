@@ -76,3 +76,6 @@ function redirectToHomePage() {
 function redirectToProductPage() {
   window.location.href = 'products.html';
 }
+function redirectToProductDetailsPage() {
+  window.location.href = 'product-details.html';
+}
