@@ -412,7 +412,8 @@ i {
 .products-div~div {
     display: flex;
     justify-content: center;
-    margin: 30px;
+    margin-top: 70px;
+    margin-bottom: 30px;
 }
 
 .btn-round {
